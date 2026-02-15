@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkBridge</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <rect width="24" height="24" rx="6" fill="#0052CC"/>
+          <path d="M7 8h10M7 12h7M7 16h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h1>MarkBridge</h1>
+      </div>
+      <span class="version">v1.0.0</span>
+    </header>
+
+    <!-- Status Banner -->
+    <div id="status" class="status detecting">
+      <span class="status-icon"></span>
+      <span class="status-text">Detecting page type…</span>
+    </div>
+
+    <!-- Options -->
+    <div id="options" class="options">
+      <label class="option">
+        <input type="checkbox" id="opt-frontmatter" checked>
+        <span>Include YAML front matter</span>
+      </label>
+      <label class="option">
+        <input type="checkbox" id="opt-title" checked>
+        <span>Include page title as H1</span>
+      </label>
+      <label class="option">
+        <input type="checkbox" id="opt-embed-images" checked>
+        <span>Embed images inline (base64)</span>
+        <span class="option-hint" title="Downloads images and embeds them directly in the Markdown file so they render everywhere. Increases file size.">?</span>
+      </label>
+    </div>
+
+    <!-- Convert Button -->
+    <button id="convert-btn" class="btn btn-primary" disabled>
+      <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M2 2h12v12H2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <path d="M5 6l2 2-2 2M8 10h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span id="convert-btn-text">Convert to Markdown</span>
+    </button>
+
+    <!-- Progress -->
+    <div id="progress" class="progress hidden">
+      <div class="progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <span id="progress-text" class="progress-text">Extracting…</span>
+    </div>
+
+    <!-- Results -->
+    <div id="results" class="results hidden">
+      <div class="results-header">
+        <span id="results-stats" class="results-stats"></span>
+        <div class="results-actions">
+          <button id="copy-btn" class="btn btn-sm btn-secondary" title="Copy to clipboard">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <rect x="4" y="4" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M10 4V3a1 1 0 00-1-1H3a1 1 0 00-1 1v6a1 1 0 001 1h1" stroke="currentColor" stroke-width="1.3"/>
+            </svg>
+            Copy
+          </button>
+          <button id="download-btn" class="btn btn-sm btn-primary" title="Download .md file">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M7 2v7M4 7l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download
+          </button>
+        </div>
+      </div>
+      <pre id="preview" class="preview"></pre>
+    </div>
+
+    <!-- Usage Stats -->
+    <div id="usage-stats" class="usage-stats">
+      <span id="stats-text" class="stats-text"></span>
+    </div>
+  </div>
+
+  <!-- Libraries -->
+  <script src="../lib/turndown.js"></script>
+  <script src="../lib/turndown-plugin-gfm.js"></script>
+  <script src="../lib/analytics.js"></script>
+  <!-- App -->
+  <script src="popup.js"></script>
+</body>
+</html>

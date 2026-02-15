@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — MarkBridge</title>
+  <meta name="description" content="MarkBridge privacy policy. No data collection, no tracking, no external requests. All processing happens locally in your browser.">
+  <meta name="theme-color" content="#0052CC">
+
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230052CC'/><path d='M7 8h10M7 12h7M7 16h10' stroke='white' stroke-width='2' stroke-linecap='round'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .policy-page {
+      padding: 140px 0 80px;
+      min-height: 100vh;
+    }
+    .policy-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .policy-content h1 {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .policy-date {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      margin-bottom: 40px;
+    }
+    .policy-content h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    .policy-content p,
+    .policy-content ul {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+    }
+    .policy-content ul {
+      padding-left: 24px;
+    }
+    .policy-content li {
+      margin-bottom: 8px;
+    }
+    .policy-content strong {
+      color: var(--color-text);
+    }
+    .policy-content a {
+      color: var(--color-primary);
+    }
+    .policy-highlight {
+      background: #E3FCEF;
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin: 32px 0;
+      font-size: 16px;
+      color: #006644;
+      line-height: 1.6;
+    }
+    .policy-highlight strong {
+      color: #006644;
+    }
+  </style>
+</head>
+<body>
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="/" class="nav-logo">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#0052CC"/>
+          <path d="M7 8h10M7 12h7M7 16h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>MarkBridge</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/#how-it-works">How It Works</a>
+        <a href="/#contact">Contact</a>
+        <a href="/#hero" class="nav-cta">Get Extension</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── Privacy Policy Content ──────────────────────────────────── -->
+  <section class="policy-page">
+    <div class="container">
+      <div class="policy-content">
+        <h1>Privacy Policy</h1>
+        <p class="policy-date">Effective date: February 13, 2026</p>
+
+        <div class="policy-highlight">
+          <strong>The short version:</strong> MarkBridge does not collect, store, or transmit any of your data to external servers. All document processing happens entirely within your browser. We have no analytics servers, no tracking pixels, and no third-party data sharing.
+        </div>
+
+        <h2>1. What MarkBridge Does</h2>
+        <p>
+          MarkBridge is a Chrome browser extension that converts Confluence wiki pages into Markdown format. When you click "Convert to Markdown," the extension:
+        </p>
+        <ul>
+          <li>Reads the content of the currently active Confluence page in your browser tab</li>
+          <li>Processes and converts the HTML content to Markdown locally within your browser</li>
+          <li>Displays the converted Markdown in the extension popup</li>
+          <li>Allows you to copy the result to your clipboard or download it as a file</li>
+        </ul>
+
+        <h2>2. Data We Collect</h2>
+        <p><strong>None.</strong> MarkBridge does not collect any personal information, usage data, or page content. Specifically:</p>
+        <ul>
+          <li><strong>No personal information</strong> — We do not collect your name, email, IP address, or any identifiers</li>
+          <li><strong>No page content</strong> — The content of your Confluence pages is never sent to any server. All conversion happens in your browser</li>
+          <li><strong>No usage tracking</strong> — We do not track which pages you convert, how often you use the extension, or any behavioral data on external servers</li>
+          <li><strong>No cookies or fingerprinting</strong> — We do not use cookies, web beacons, or browser fingerprinting</li>
+        </ul>
+
+        <h2>3. Local Storage</h2>
+        <p>
+          MarkBridge stores a small amount of anonymous usage data locally on your device using Chrome's <code>chrome.storage.local</code> API. This data includes:
+        </p>
+        <ul>
+          <li>A count of how many pages you have converted (displayed as "X pages converted" in the extension popup)</li>
+          <li>Basic feature usage counters (e.g., how many times you used copy vs. download)</li>
+        </ul>
+        <p>
+          This data <strong>never leaves your device</strong>. It is stored solely for your convenience (to show you your usage stats) and is not transmitted anywhere. You can clear this data at any time through Chrome's extension settings.
+        </p>
+
+        <h2>4. Permissions</h2>
+        <p>MarkBridge requests the following Chrome extension permissions:</p>
+        <ul>
+          <li><strong>activeTab</strong> — Allows the extension to access the content of the tab you are currently viewing, only when you click the extension icon. This is required to read the Confluence page content for conversion.</li>
+          <li><strong>scripting</strong> — Allows the extension to inject a content script into Confluence pages to extract and preprocess the page content for conversion.</li>
+          <li><strong>storage</strong> — Allows the extension to store your local usage counters (conversion count) on your device.</li>
+        </ul>
+        <p>
+          These are the minimum permissions required for the extension to function. We do not request access to browsing history, bookmarks, or any other browser data.
+        </p>
+
+        <h2>5. Third-Party Services</h2>
+        <p>
+          MarkBridge does not use any third-party analytics, advertising, or data processing services. The extension makes <strong>zero external network requests</strong> during normal operation.
+        </p>
+        <p>
+          The only network activity occurs if you enable the "Embed images inline" option — in that case, the extension fetches images from the Confluence page itself (the same server you are already viewing) to embed them in the Markdown output. These requests use your existing browser session and no data is sent to MarkBridge or any third party.
+        </p>
+
+        <h2>6. Data Security</h2>
+        <p>
+          Since we do not collect or transmit any data, there is no data to secure on our end. Your Confluence content stays in your browser at all times. The converted Markdown output exists only in your browser's memory and in any file you choose to download or clipboard content you choose to paste.
+        </p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>
+          MarkBridge does not collect any personal information from anyone, including children under the age of 13.
+        </p>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>
+          We may update this privacy policy from time to time. Any changes will be posted on this page with an updated effective date. Since we do not collect email addresses, we encourage you to review this page periodically.
+        </p>
+
+        <h2>9. Contact Us</h2>
+        <p>
+          If you have any questions about this privacy policy or MarkBridge's practices, please contact us at:
+        </p>
+        <ul>
+          <li>Email: <a href="mailto:hello@markbridge.io">hello@markbridge.io</a></li>
+          <li>Website: <a href="https://markbridge.io">markbridge.io</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ──────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect width="24" height="24" rx="6" fill="#0052CC"/>
+              <path d="M7 8h10M7 12h7M7 16h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>MarkBridge</span>
+          </a>
+          <p>Bridge any document to Markdown. Free, open-source, and privacy-first.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="/#features">Features</a>
+            <a href="/#how-it-works">How It Works</a>
+            <a href="#">Chrome Web Store</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="https://github.com/markbridge" target="_blank" rel="noopener">GitHub</a>
+            <a href="/#contact">Contact</a>
+            <a href="/privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MarkBridge. All rights reserved.</p>
+        <p>Made with care for the Markdown community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

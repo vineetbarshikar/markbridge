@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkBridge — Bridge Any Document to Markdown</title>
+  <meta name="description" content="Convert Confluence, PDFs, Word docs and more into clean, structured Markdown — instantly. A free Chrome extension.">
+  <meta name="theme-color" content="#0052CC">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MarkBridge — Bridge Any Document to Markdown">
+  <meta property="og:description" content="Convert Confluence, PDFs, Word docs and more into clean, structured Markdown — instantly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://markbridge.io">
+
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230052CC'/><path d='M7 8h10M7 12h7M7 16h10' stroke='white' stroke-width='2' stroke-linecap='round'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="#" class="nav-logo">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#0052CC"/>
+          <path d="M7 8h10M7 12h7M7 16h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>MarkBridge</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#contact">Contact</a>
+        <a href="#hero" class="nav-cta">Get Extension</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── Hero Section ────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Free &amp; Open Source Chrome Extension
+        </div>
+        <h1 class="hero-headline">
+          Bridge Any Document<br>to <span class="text-gradient">Markdown.</span>
+        </h1>
+        <p class="hero-subtext">
+          Convert Confluence, PDFs, Word docs and more into clean, structured Markdown — instantly.
+        </p>
+        <div class="hero-ctas">
+          <a href="#" class="btn btn-primary btn-lg">
+            <span class="btn-emoji">&#x1F680;</span>
+            Download Chrome Extension
+          </a>
+          <a href="#" class="btn btn-outline btn-lg">
+            <span class="btn-emoji">&#x1F4D8;</span>
+            View on Chrome Web Store
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-avatars">
+            <div class="trust-avatar" style="background:#4C9AFF;">V</div>
+            <div class="trust-avatar" style="background:#36B37E;">M</div>
+            <div class="trust-avatar" style="background:#FF5630;">A</div>
+            <div class="trust-avatar" style="background:#6554C0;">K</div>
+          </div>
+          <span class="trust-text">Privacy-first. No data leaves your browser.</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="card-header">
+            <div class="card-dots">
+              <span style="background:#FF5F56;"></span>
+              <span style="background:#FFBD2E;"></span>
+              <span style="background:#27C93F;"></span>
+            </div>
+            <span class="card-title">confluence-page.html</span>
+          </div>
+          <div class="card-body card-html">
+            <code>&lt;h1&gt;Project Overview&lt;/h1&gt;</code>
+            <code>&lt;ac:structured-macro</code>
+            <code>  ac:name="info"&gt;</code>
+            <code>  &lt;p&gt;Sprint planning...&lt;/p&gt;</code>
+            <code>&lt;/ac:structured-macro&gt;</code>
+            <code>&lt;table class="confluenceTable"&gt;</code>
+            <code>  &lt;tr&gt;&lt;th&gt;Task&lt;/th&gt;...</code>
+          </div>
+        </div>
+        <div class="hero-arrow">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="24" fill="#0052CC"/>
+            <path d="M16 24h16M28 18l6 6-6 6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="hero-card">
+          <div class="card-header">
+            <div class="card-dots">
+              <span style="background:#FF5F56;"></span>
+              <span style="background:#FFBD2E;"></span>
+              <span style="background:#27C93F;"></span>
+            </div>
+            <span class="card-title">project-overview.md</span>
+          </div>
+          <div class="card-body card-md">
+            <code><em># Project Overview</em></code>
+            <code></code>
+            <code><em>> **Info:** Sprint planning...</em></code>
+            <code></code>
+            <code><em>| Task | Owner | Status |</em></code>
+            <code><em>|------|-------|--------|</em></code>
+            <code><em>| Auth | @jane | Done   |</em></code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Features Section ────────────────────────────────────────── -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">Everything you need for<br>seamless Markdown conversion</h2>
+        <p class="section-subtitle">Built for teams that live in Confluence but think in Markdown.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#E6F0FF;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0052CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+          </div>
+          <h3>One-Click Conversion</h3>
+          <p>Open any Confluence page and click the extension icon. Your Markdown is ready in seconds.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#E3FCEF;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#36B37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h3>Clean Markdown Output</h3>
+          <p>Produces well-structured GitHub Flavored Markdown with proper headings, lists, tables, and code blocks.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#EAE6FF;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6554C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+          </div>
+          <h3>Image Embedding</h3>
+          <p>Downloads and embeds images as base64 so they render everywhere — no broken image links.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#FFFAE6;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF8B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3>Confluence Macro Support</h3>
+          <p>Handles code blocks, info panels, expand sections, task lists, status macros, mentions, and more.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#FFEBE6;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF5630" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>Privacy-First</h3>
+          <p>No data leaves your browser. Zero external requests. All processing happens locally.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#E6FCFF;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00B8D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </div>
+          <h3>Copy or Download</h3>
+          <p>Copy Markdown to clipboard instantly or download as a .md file. Your workflow, your way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── How It Works ────────────────────────────────────────────── -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">Three steps to perfect Markdown</h2>
+        <p class="section-subtitle">No configuration. No sign-up. Just click and convert.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Navigate</h3>
+            <p>Go to any Confluence page in Chrome. MarkBridge auto-detects Cloud, Server, and Data Center.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Convert</h3>
+            <p>Click the MarkBridge icon and hit "Convert to Markdown." Customize options like front matter and image embedding.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Use</h3>
+            <p>Copy to clipboard or download as .md. Paste into GitHub, Notion, Obsidian, or any Markdown editor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Supported Platforms ─────────────────────────────────────── -->
+  <section class="platforms">
+    <div class="container">
+      <div class="platforms-inner">
+        <h2>Works with all Confluence versions</h2>
+        <div class="platform-badges">
+          <div class="platform-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Confluence Cloud
+          </div>
+          <div class="platform-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Confluence Server
+          </div>
+          <div class="platform-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Confluence Data Center
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact Section ─────────────────────────────────────────── -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Have a question or<br>feature request?</h2>
+          <p class="section-subtitle">We'd love to hear from you. Drop us a message and we'll get back to you as soon as possible.</p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0052CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>hello@markbridge.io</span>
+            </div>
+            <div class="contact-detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0052CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"></path>
+              </svg>
+              <a href="https://github.com/markbridge" target="_blank" rel="noopener">github.com/markbridge</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="general">General Inquiry</option>
+                <option value="feature">Feature Request</option>
+                <option value="bug">Bug Report</option>
+                <option value="enterprise">Enterprise / Integration</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us what's on your mind..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-full">
+              Send Message
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+            <div class="form-success hidden" id="form-success">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#36B37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <p>Thank you! Your message has been sent.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ──────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect width="24" height="24" rx="6" fill="#0052CC"/>
+              <path d="M7 8h10M7 12h7M7 16h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>MarkBridge</span>
+          </a>
+          <p>Bridge any document to Markdown. Free, open-source, and privacy-first.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#">Chrome Web Store</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="#contact">Contact</a>
+            <a href="./privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MarkBridge. All rights reserved.</p>
+        <p>Made with care for the Markdown community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

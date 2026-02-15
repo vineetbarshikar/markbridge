@@ -1,0 +1,25 @@
+{
+  "name": "markbridge",
+  "version": "1.0.0",
+  "description": "MarkBridge – Chrome extension to convert Confluence wiki pages to clean Markdown. markbridge.io",
+  "private": true,
+  "scripts": {
+    "generate-icons": "node scripts/generate-icons.js",
+    "lint": "echo 'Add ESLint configuration for linting'",
+    "package": "mkdir -p dist && zip -r dist/markbridge.zip manifest.json popup/ content-scripts/ lib/ icons/ -x '*.DS_Store' -x '*node_modules*'"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "turndown": "^7.2.0",
+    "turndown-plugin-gfm": "^1.0.2"
+  },
+  "keywords": [
+    "confluence",
+    "markdown",
+    "chrome-extension",
+    "converter",
+    "wiki"
+  ],
+  "author": "Vineet Barshikar",
+  "license": "MIT"
+}
