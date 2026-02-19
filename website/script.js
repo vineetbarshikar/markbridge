@@ -123,18 +123,33 @@
 
     if (!valid) return;
 
-    // Simulate form submission
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = 'Sending...';
 
-    setTimeout(function () {
-      form.style.display = 'none';
-      formSuccess.classList.remove('hidden');
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-    }, 1200);
+    var formData = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(function (response) {
+        if (response.ok) {
+          form.style.display = 'none';
+          formSuccess.classList.remove('hidden');
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(function () {
+        alert('Something went wrong. Please email us at hello@markbridge.io instead.');
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      });
   });
 
   function isValidEmail(email) {

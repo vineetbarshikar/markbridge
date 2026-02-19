@@ -4,7 +4,8 @@
 
 MarkBridge is a Chrome extension that instantly converts Confluence pages into well-structured, GitHub Flavored Markdown. Whether you're migrating docs to GitHub, Notion, or Obsidian — or simply prefer Markdown over Confluence's editor — MarkBridge handles the heavy lifting, entirely within your browser.
 
-Website: [markbridge.io](https://markbridge.io)
+Website: [markbridge.io](https://markbridge.io)  
+Chrome Web Store: [Install MarkBridge](https://chromewebstore.google.com/detail/cjdccchapjhkeiglnaammmfnhjojelcg)
 
 ---
 
@@ -191,7 +192,7 @@ Then visit `http://localhost:8000`.
 - [ ] Custom Markdown templates
 - [ ] Keyboard shortcut support
 - [ ] Context menu integration (right-click → "Convert to Markdown")
-- [ ] Chrome Web Store publication
+- [x] Chrome Web Store publication
 
 ---
 
